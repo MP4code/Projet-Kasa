@@ -1,18 +1,21 @@
 import React from "react";
-import House from "../../data/logements.json";
+import logements from "../../data/logements.json";
+import "../home/home.css";
+import { Link } from "react-router-dom";
 
 const Cards = (props) => {
-  const getId = props.house;
-  const GetId1 = House.map((house) => (
-    <li key={House.toString()}>{house.title}</li>
-  ));
   return (
-    <ul>
-      <li>
-        <link>{GetId1}</link>
-      </li>
-    </ul>
+    <div className="card">
+      <div className="card-container">
+        {logements.map((logement) => (
+          <Link to={`/logement/${logement.id}`}>
+            <div className="card-content">
+              <h2>{logement.title}</h2>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 };
-
 export default Cards;

@@ -1,12 +1,27 @@
-import React from 'react'
-import Data from '../../data/Data'
+import React, { useEffect, useState } from "react";
+import Data from "../../data/Data";
+import { useParams } from "react-router-dom";
+import logements from "../../data/logements.json";
+import Carousel from "../../components/carousel/Carousel";
 
 const Logement = () => {
-  return (
-    <div>Logement
-      <Data></Data>
-    </div>
-  )
-}
+  const { id } = useParams();
+  const [logement, setLogement] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const lgt = logements.find((house) => house.id === id);
+    setLogement(lgt);
+    setLoading(false);
+  }, []);
 
-export default Logement
+  return loading ? (
+    <div>loading...</div>
+  ) : (
+    <div>
+      <Carousel pictures={logement.pictures} />
+      <h2>{logement.title}</h2>
+    </div>
+  );
+};
+
+export default Logement;
