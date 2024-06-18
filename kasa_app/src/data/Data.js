@@ -1,12 +1,14 @@
 import React from 'react'
 import Housing from "./logements.json"
 
+
+
 const Data = () => {
   return (
     <div>
         {
-           Housing.map((Housing,i)=>(
-                <div key={i}>
+           Housing.map((Housing)=>(
+                <div key={Housing}>
                     <h2>{Housing.title}</h2>
                     <img src={Housing.cover} alt='kasa'/>
                     <p>{Housing.location}</p>
