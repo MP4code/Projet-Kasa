@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import "../carousel/carousel.css"
+import ArrowForward from "../../img/arrow_forward_ios-24px 1.png"
+import ArrowBack from "../../img/arrow_back_ios-24px 1.png"
 
 const Carousel = (props) => {
   const { pictures } = props;
@@ -18,10 +21,31 @@ const Carousel = (props) => {
     setIndex(newIndex);
   };
   return (
-    <div>
+    <div className="carousel">
+      <div className="carousel-container">
+      <img src={pictures[index]} style={{
+        width:"1240px", height:"415px" , objectFit:"cover", borderRadius:"20px", position:"relative"}}/>
+      
+     <div className="arrow">
+   
+     <img src={ArrowBack} alt="flèche directionnelle gauche"
+      style={{
+        position:"absolute", width:"96px", color:"white"
+      }}/>
+
+<img src={ArrowForward} alt="flèche directionnelle droite"
+      style={{
+        position:"absolute", width:"96px", color:"white"
+      }}/>
+      
+     </div>
+      
+      
+      
       <button onClick={decrement}>précédent</button>
       <button onClick={increment}>suivant</button>
-      <img src={pictures[index]}></img>
+      
+      </div>
     </div>
   );
 };
