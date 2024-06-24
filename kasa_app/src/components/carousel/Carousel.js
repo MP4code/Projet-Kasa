@@ -3,6 +3,7 @@ import "../carousel/carousel.css"
 import ArrowForward from "../../img/arrow_forward_ios-24px 1.png"
 import ArrowBack from "../../img/arrow_back_ios-24px 1.png"
 
+
 const Carousel = (props) => {
   const { pictures } = props;
   const [index, setIndex] = useState(0);
@@ -30,21 +31,15 @@ const Carousel = (props) => {
    
      <img src={ArrowBack} alt="flèche directionnelle gauche"
       style={{
-        position:"absolute", width:"96px", color:"white"
-      }}/>
+        position:"absolute", width:"96px", color:"white" , cursor:"pointer"
+      }} onClick={decrement}/>
 
 <img src={ArrowForward} alt="flèche directionnelle droite"
       style={{
-        position:"absolute", width:"96px", color:"white"
-      }}/>
+        position:"absolute", width:"96px", color:"white" , cursor:"pointer"
+      }} onClick={increment}/>
       
      </div>
-      
-      
-      
-      <button onClick={decrement}>précédent</button>
-      <button onClick={increment}>suivant</button>
-      
       </div>
     </div>
   );

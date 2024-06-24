@@ -5,6 +5,7 @@ import AboutUs from "../pages/about-us/AboutUs";
 import Header from "../layout/header/Header";
 import Footer from "../layout/footer/Footer";
 import Logement from "../pages/logement/Logement";
+import Error404 from "../pages/error-404/Error404";
 
 const Navigation = () => {
   return (
@@ -14,6 +15,7 @@ const Navigation = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/logement/:id" element={<Logement />} />
+        <Route exact path="*" element={<Error404/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

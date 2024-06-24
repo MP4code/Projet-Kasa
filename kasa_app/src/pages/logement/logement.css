@@ -1,0 +1,65 @@
+.card-logement {
+    border: 2px solid blue;
+    width: 100%;
+}
+
+.card-logement_container {
+    padding: 0 100px;
+}
+
+.card-logement_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-logement_title h3 {
+    margin-bottom: 0;
+}
+
+.card-logement_title p {
+    margin-top: 0;
+}
+
+.card-logement_host {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.card-logement_host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 30px;
+}
+
+.card-logement_host p {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: right;
+    color: #FF6060;
+}
+
+.card-logement_tag{
+    border: 2px solid blueviolet;
+    display: flex;
+}
+.card-logement_tag p{
+    background: #FF6060;
+    color: white;
+    padding: 0 2em;
+    margin: 1em;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.96px;
+    text-align: center;
+
+}
+
+.card-logement_rating {
+    border: 2px solid greenyellow;
+}

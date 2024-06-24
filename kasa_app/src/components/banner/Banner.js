@@ -1,6 +1,6 @@
 import React from 'react'
 import '../banner/banner.css'
-import BannerHome from '../../img/Banner.jpg'
+
 
 const Banner = (props) => {
     if(props.name === "home"){
@@ -9,8 +9,17 @@ const Banner = (props) => {
                 <div className='bannerContainer'>
                 <h1>Chez vous, partout et ailleurs</h1>
                 </div>
-            </div> 
+            </div>
+            
           )
+    }
+    else{
+        return(
+            <div className='bannerAboutUs' >
+            <div className='bannerContainer'>
+            </div>
+            </div> 
+        )
     }
  
 }
