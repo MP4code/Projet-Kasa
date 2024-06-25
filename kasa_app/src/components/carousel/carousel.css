@@ -1,5 +1,6 @@
 .carousel{
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,3 +28,29 @@
     align-items: center;
 
 }
+
+.infoPics{
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+.hiddenElement{
+    display: none;
+}
+
+/*js note : 
+  const hiddenElements =()=>{
+    if( index === pictures.length)
+    {
+
+    }
+    return(
+     
+    )
+    
+  }
+    si l'index est plus petit que pic.length alors afficher
+*/

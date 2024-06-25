@@ -1,5 +1,4 @@
 .card-logement {
-    border: 2px solid blue;
     width: 100%;
 }
 
@@ -23,14 +22,16 @@
 .card-logement_host {
     display: flex;
     justify-content: end;
-    gap: 1em;
+    align-items: center;
     margin: 1em 0;
+    gap: 1em;
 }
 
 .card-logement_host img {
     width: 64px;
     height: 64px;
     border-radius: 30px;
+    object-fit: contain;
 }
 
 .card-logement_host p {
@@ -40,6 +41,7 @@
     line-height: 25.67px;
     text-align: right;
     color: #FF6060;
+    margin: 0;
 }
 
 .card-logement_tag{
@@ -63,3 +65,12 @@
 .card-logement_rating {
     border: 2px solid greenyellow;
 }
+.card-logement_info{
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 30px;
+    border: 2px solid red;
+}
+
