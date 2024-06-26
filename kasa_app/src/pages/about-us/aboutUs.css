@@ -1,0 +1,10 @@
+.aboutList-container{
+   padding: 5% 6%;
+}
+.aboutList-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}

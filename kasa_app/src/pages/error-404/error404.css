@@ -1,27 +1,25 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10% 0 10% 0;
+    gap: 30px;
+    padding: 20% 0 20% 0;
 }
 
-.container h3{
+.container h3 {
     font-family: Montserrat;
-font-size: 36px;
-font-weight: 500;
-line-height: 51.34px;
-text-align: left;
-color: #FF6060;
-
+    color: #FF6060;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
 }
 
-.container a{
+.container a {
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 500;
     line-height: 25.67px;
-    text-align: left;
     color: black;
     cursor: pointer;
 }

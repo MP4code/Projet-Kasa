@@ -8,13 +8,14 @@
 }
 .card-container{
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
    justify-content: space-between;
    gap: 50px;
 }
+
 .card-content{
     width:  340px;
     height: 340px;
@@ -23,8 +24,26 @@
     display: flex;
     align-items: flex-end;
     background-size: cover;
+    
 }
  .card-container a{
     color: white;
     text-decoration: none;
+ }
+
+ .test{
+ background: linear-gradient(180deg, #FFFFFF 0%, #0A0A0A00 0%, #04040434 50%, #00000080 80%, #00000080 90%);
+
+    width:  380px;
+    height: 380px;
+    border-radius: 10px;
+    position: absolute;
+ }
+ .test h2{
+    padding-left: 1em;
+    margin-top: 80%;
+ }
+
+ #acceuil{
+   text-decoration: underline;
  }

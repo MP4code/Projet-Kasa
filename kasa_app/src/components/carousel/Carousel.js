@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+
 import "../carousel/carousel.css";
 import ArrowForward from "../../img/arrow_forward_ios-24px 1.png";
 import ArrowBack from "../../img/arrow_back_ios-24px 1.png";
+import { render } from "@testing-library/react";
+
 
 const Carousel = (props) => {
   const { pictures } = props;
   const [index, setIndex] = useState(0);
-
   const increment = () => {
     let newIndex = index + 1;
     if (newIndex > pictures.length - 1) {
@@ -21,7 +23,7 @@ const Carousel = (props) => {
     }
     setIndex(newIndex);
   };
-
+ 
 
   return (
     <div className="carousel">
@@ -37,7 +39,7 @@ const Carousel = (props) => {
           }}
         />
 
-        <div className="arrow hiddenElement">
+        <div className="arrow">
           <img
             src={ArrowBack}
             alt="flèche directionnelle gauche"
@@ -63,7 +65,7 @@ const Carousel = (props) => {
           />
         </div>
 
-        <div className="infoPics hiddenElement">
+        <div className="infoPics">
           <p>
             {[index + 1]}/{pictures.length}
           </p>

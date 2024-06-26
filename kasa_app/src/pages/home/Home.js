@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../layout/header/Header";
 import "./home.css";
 import Banner from "../../components/banner/Banner";
 import Cards from "../home/Cards";
