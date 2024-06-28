@@ -10,7 +10,7 @@ const Cards = (props) => {
         {logements.map((logement) => (
           <Link to={`/logement/${logement.id}`}>
             
-            <div className="test"><h2>{logement.title}</h2></div>
+            <div className="card-title"><h2>{logement.title}</h2></div>
             
             <div className="card-content" style={{
                 backgroundImage:`url(${logement.cover})`,

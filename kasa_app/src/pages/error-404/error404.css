@@ -23,3 +23,21 @@
     color: black;
     cursor: pointer;
 }
+
+@media (max-width: 375px) {
+
+    
+  .container img {
+    width: 198px;
+    height: 99px;
+  }
+    .container h3 {
+        font-family: Montserrat;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-align: center;
+        padding: 1em;
+        margin: 1em;
+    }
+}

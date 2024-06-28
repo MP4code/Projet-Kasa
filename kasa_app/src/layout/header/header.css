@@ -1,17 +1,33 @@
-.headerContainer{
+.headerContainer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-.headerContainer nav{
+
+.headerContainer nav {
     display: flex;
-    gap : 20px;
+    gap: 20px;
 }
-.headerContainer nav a{
+
+.headerContainer nav a {
     text-decoration: none;
     color: black;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+    text-align: right;
+
 
 }
-.accueil{
-    text-decoration: underline;
+
+@media (max-width: 375px) {
+    .headerContainer nav a {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 17.11px;
+        text-align: right;
+
+    }
 }

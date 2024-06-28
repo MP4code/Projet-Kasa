@@ -21,14 +21,6 @@ h1 {
   color: white;
 }
 
-h2 {
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25.67px;
-  text-align: left;
-
-}
 
 
 
@@ -45,13 +37,7 @@ h2 {
     justify-content: space-between;
   }
 
-  .headerContainer nav {
-    border: 2px solid red;
-
-  }
-
   .headerContainer nav a {
-    border: 2px solid palevioletred;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,23 +63,8 @@ h2 {
     padding: 0 20px;
   }
 
-  .bannerAboutUs {
-    height: 111px;
-  }
 
 
-  /*Page error404*/
-
-  .container h3 {
-    text-align: center;
-    margin: 5% 10%;
-    border: 2px solid red;
-  }
-
-  .container img {
-    width: 198px;
-    height: 99px;
-  }
-
+  
 
 }

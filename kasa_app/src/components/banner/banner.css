@@ -9,13 +9,7 @@
     background-position: center;
     
 }
-/*
-.bannerHome img{
-    width: 50%;
-    background-size: contain;
-    background-position: center;
-}
-*/
+
 .bannerContainer{
     width: 100%;
     height: 100%;
@@ -43,4 +37,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (max-width: 375px) {
+    .bannerAboutUs{
+        height: 111px;
+    }
+    .bannerHome{
+        height: 111px;
+    }
+    .bannerContainer{
+        justify-content: flex-start;
+    }
+   
+    .bannerContainer h1 {
+        font-family: Montserrat;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 40px;
+        text-align: left;
+        padding: 1em;
+    
+      }
 }

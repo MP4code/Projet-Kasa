@@ -4,6 +4,7 @@ import logements from "../../data/logements.json";
 import Carousel from "../../components/carousel/Carousel";
 import Collapse from "../../components/collapse/Collapse";
 import "../logement/logement.css"
+import Rating from "../../components/rating/Rating";
 
 
 const Logement = () => {
@@ -37,14 +38,15 @@ const Logement = () => {
           <img src={logement.host.picture} />
         </div>
         </div>
-
+        <div className="card-logement_content">
         <div className="card-logement_tag">
           {logement.tags.map((tag,i)=>(<p key={i}>{tag}</p>))}
       
         </div>
 
         <div className="card-logement_rating">
-
+        <Rating content={logement.rating}/>
+        </div>
         </div>
         <div className="card-logement_info">
           <Collapse title="Description" content={logement.description}/>

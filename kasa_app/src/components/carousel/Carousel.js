@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import "../carousel/carousel.css";
 import ArrowForward from "../../img/arrow_forward_ios-24px 1.png";
 import ArrowBack from "../../img/arrow_back_ios-24px 1.png";
-import { render } from "@testing-library/react";
+
 
 
 const Carousel = (props) => {
   const { pictures } = props;
   const [index, setIndex] = useState(0);
+  const [styleArrow, setStyleArrow] = useState("");
+
   const increment = () => {
     let newIndex = index + 1;
     if (newIndex > pictures.length - 1) {
@@ -23,13 +25,21 @@ const Carousel = (props) => {
     }
     setIndex(newIndex);
   };
- 
 
+  const hiddenElement =()=>{
+    if(index === 1 ){
+      console.log("test")
+    }
+
+  }
+  hiddenElement();
+  
   return (
     <div className="carousel">
       <div className="carousel-container">
         <img
           src={pictures[index]}
+          alt="kasa photos logements"
           style={{
             width: "1240px",
             height: "415px",
