@@ -24,11 +24,11 @@
 }
 
 .carousel-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .infoPics {
@@ -46,16 +46,25 @@
 
 @media (max-width: 375px) {
     .carousel {
-        margin: 20px;
+        width: auto;
+        height: 255px;
     }
 
     .carousel-container {
-        border: 2px solid pink;
+        width: auto;
+        height: 255px;
     }
 
     .carousel-container img[alt="kasa photos logements"] {
-        width: 335px;
-        height: 255px;
-        border-radius: 10px;
+      width: auto;
+    }
+    .arrow{
+        width: 100%;
+    }
+    .arrow img[alt="flèche directionnelle gauche"] {
+        left: 15px;
+    }
+    .arrow img[alt="flèche directionnelle droite"] {
+        right: 15px;
     }
 }

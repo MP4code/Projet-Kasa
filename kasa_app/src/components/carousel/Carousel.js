@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 
 import "../carousel/carousel.css";
 import ArrowForward from "../../img/arrow_forward_ios-24px 1.png";
@@ -9,7 +9,8 @@ import ArrowBack from "../../img/arrow_back_ios-24px 1.png";
 const Carousel = (props) => {
   const { pictures } = props;
   const [index, setIndex] = useState(0);
-  const [styleArrow, setStyleArrow] = useState("");
+  const [styleArrow, setStyleArrow] = useState("arrow");
+  const [styleInfo, setStyleInfo] = useState("infoPics");
 
   const increment = () => {
     let newIndex = index + 1;
@@ -25,14 +26,15 @@ const Carousel = (props) => {
     }
     setIndex(newIndex);
   };
-
-  const hiddenElement =()=>{
-    if(index === 1 ){
-      console.log("test")
+  
+  useEffect(() => {
+    if ( pictures.length < 2 ) {
+     setStyleArrow("hiddenElement");
+     setStyleInfo("hiddenElement")
     }
-
-  }
-  hiddenElement();
+  
+    
+  }, []);
   
   return (
     <div className="carousel">
@@ -41,21 +43,21 @@ const Carousel = (props) => {
           src={pictures[index]}
           alt="kasa photos logements"
           style={{
-            width: "1240px",
+            width:"100%",
             height: "415px",
             objectFit: "cover",
-            borderRadius: "20px",
+            borderRadius: "10px",
             position: "relative",
           }}
         />
 
-        <div className="arrow">
+        <div className={styleArrow}>
           <img
             src={ArrowBack}
             alt="flèche directionnelle gauche"
             style={{
               position: "absolute",
-              width: "96px",
+              width: "10%",
               color: "white",
               cursor: "pointer",
             }}
@@ -67,7 +69,7 @@ const Carousel = (props) => {
             alt="flèche directionnelle droite"
             style={{
               position: "absolute",
-              width: "96px",
+              width: "10%",
               color: "white",
               cursor: "pointer",
             }}
@@ -75,7 +77,7 @@ const Carousel = (props) => {
           />
         </div>
 
-        <div className="infoPics">
+        <div className={styleInfo}>
           <p>
             {[index + 1]}/{pictures.length}
           </p>

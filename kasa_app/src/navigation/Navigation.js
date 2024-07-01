@@ -10,7 +10,7 @@ import Error404 from "../pages/error-404/Error404";
 const Navigation = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <Header/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about-us" element={<AboutUs />} />

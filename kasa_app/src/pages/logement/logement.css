@@ -1,18 +1,29 @@
 .card-logement {
   width: 100%;
+  margin-top: 2%;
+
 }
 
 .card-logement_container {
   padding: 0 100px;
+ 
 }
-
-.card-logement_content {
+.Card-logement-container{
   display: flex;
+  flex-direction: wrap;
   justify-content: space-between;
 }
 
+
+.card-logement_content {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
 .card-logement_title h3 {
-  margin-bottom: 0;
+  margin: 0;
   font-family: Montserrat;
   font-size: 36px;
   font-weight: 500;
@@ -25,6 +36,11 @@
 
 .card-logement_title p {
   margin-top: 0;
+}
+
+.card-logement_rating{
+  display: flex;
+  justify-content: end;
 }
 
 .card-logement_host {
@@ -82,20 +98,24 @@
 
 @media (max-width: 375px) {
   .card-logement {
-    border: 2px solid red;
     width: auto;
   }
 
   .card-logement_container {
-    border: 2px solid blue;
     margin: 20px;
     padding: 0;
   }
 
+  .Card-logement-container{
+    flex-direction: column;
+    
+  }
   .card-logement_content {
     flex-direction: column;
+    justify-content: space-around;
   }
 
+  
   .card-logement_title h3 {
     margin: 0;
     font-family: Montserrat;
@@ -114,7 +134,10 @@
     text-align: left;
 
   }
-
+  .card-logement_tag{
+    gap: 0;
+    justify-content: space-between;
+  }
   .card-logement_host img {
     width: 32px;
     height: 32px;
@@ -130,6 +153,11 @@
 
   }
 
+  .card-logement_rating{
+    justify-content: flex-start;
+    position: absolute;
+
+  }
   .card-logement_tag P {
     font-family: Montserrat;
     font-size: 10px;
@@ -145,57 +173,3 @@
   }
 
 }
-
-
-
-
-
-/*
-  const[star, setStar] = useState("");
-  const testStar = () =>{
-    if( content > 1 ){
-      setStar(starAtive)
-    }
-    setStar(starInactive)
-  }
-  testStar();
-  <img src={star}/>
-      <img src={star}/>
-      <img src={star}/>
-      <img src={star}/>
-
-
-        useEffect(() => {
-    if( content > 4){
-      setStar(starAtive);
-    }
-    
-  }, []);
-
-
-
-    useEffect(() => {
-    //for(let i= 1; i < content; i++){
-    //  console.log(i)
-    //  setStar(starAtive);
-    //}
-    
-    for(let i =1 ; i< content ; i++){
-      console.log(i)
-      return(
-        <img src={star} style={{width:'24px'}}/>
-      )
-      
-      setStar(starAtive)
-    }
-   else{
-    setStar(starInactive);}
-   <img src={star} style={{width:'24px'}}/>
-      <img src={star} style={{width:'24px'}}/>
-      <img src={star} style={{width:'24px'}}/>
-      <img src={star} style={{width:'24px'}}/>
-      <img src={star} style={{width:'24px'}}/>
-    
-
-  }, []);
-  */

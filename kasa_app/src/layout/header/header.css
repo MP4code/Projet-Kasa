@@ -1,12 +1,9 @@
 .headerContainer {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-}
-
-.headerContainer nav {
-    display: flex;
-    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .headerContainer nav a {
@@ -17,11 +14,25 @@
     font-weight: 500;
     line-height: 34.22px;
     text-align: right;
-
+    margin-right: 1em;
 
 }
+.barreInactive{
+    border-bottom: 2px solid transparent;
+}
+
+.barreActive{
+    border-bottom: 2px solid black;
+}
+
 
 @media (max-width: 375px) {
+    .headerContainer{
+        padding: 20px;
+    }
+    .headerContainer nav{
+        display: flex;
+    }
     .headerContainer nav a {
         font-family: Montserrat;
         font-size: 18px;
