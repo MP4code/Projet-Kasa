@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import logements from "../../data/logements.json";
 import "./collapse.css"
 import Image from "../../img/arrow_back_ios-24px 2.png"
     

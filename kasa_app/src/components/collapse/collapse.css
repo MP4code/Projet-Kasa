@@ -87,7 +87,7 @@
   text-align: left;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .title h3 {
     font-family: Montserrat;
     font-size: 13px;

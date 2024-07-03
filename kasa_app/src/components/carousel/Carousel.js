@@ -9,8 +9,7 @@ import ArrowBack from "../../img/arrow_back_ios-24px 1.png";
 const Carousel = (props) => {
   const { pictures } = props;
   const [index, setIndex] = useState(0);
-  const [styleArrow, setStyleArrow] = useState("arrow");
-  const [styleInfo, setStyleInfo] = useState("infoPics");
+  
 
   const increment = () => {
     let newIndex = index + 1;
@@ -27,61 +26,40 @@ const Carousel = (props) => {
     setIndex(newIndex);
   };
   
-  useEffect(() => {
-    if ( pictures.length < 2 ) {
-     setStyleArrow("hiddenElement");
-     setStyleInfo("hiddenElement")
-    }
-  
+
     
-  }, []);
-  
+ 
   return (
     <div className="carousel">
       <div className="carousel-container">
         <img
           src={pictures[index]}
           alt="kasa photos logements"
-          style={{
-            width:"100%",
-            height: "415px",
-            objectFit: "cover",
-            borderRadius: "10px",
-            position: "relative",
-          }}
+          className="carousel_img"
         />
 
-        <div className={styleArrow}>
+       { pictures.length > 1 && 
+       <>
+       <div className="arrow">
           <img
             src={ArrowBack}
             alt="flèche directionnelle gauche"
-            style={{
-              position: "absolute",
-              width: "10%",
-              color: "white",
-              cursor: "pointer",
-            }}
             onClick={decrement}
           />
 
           <img
             src={ArrowForward}
             alt="flèche directionnelle droite"
-            style={{
-              position: "absolute",
-              width: "10%",
-              color: "white",
-              cursor: "pointer",
-            }}
             onClick={increment}
           />
         </div>
-
-        <div className={styleInfo}>
+        <div className="infoPics">
           <p>
-            {[index + 1]}/{pictures.length}
+            {index + 1}/{pictures.length}
           </p>
         </div>
+        </>
+        }
       </div>
     </div>
   );

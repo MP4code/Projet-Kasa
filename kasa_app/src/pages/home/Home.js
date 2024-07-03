@@ -1,8 +1,8 @@
 import React from "react";
-import { useState , useEffect } from "react";
+
 import "./home.css";
 import Banner from "../../components/banner/Banner";
-import Cards from "../home/Cards";
+import Cards from "../../components/cards/Cards"
 
 
 const Home = () => {

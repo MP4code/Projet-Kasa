@@ -1,39 +1,36 @@
-import React, { useState, useEffect } from 'react'
-import starRatingA from "../../img/Vector.png"
-import starRatingI from "../../img/VectorInactive.png"
-
+import React, { useState, useEffect } from "react";
+import starRatingA from "../../img/Vector.png";
+import starRatingI from "../../img/VectorInactive.png";
 
 const Rating = (props) => {
-  const {content} = props;
-  const starAtive = starRatingA;
-  const starInactive = starRatingI;
-  const[ star, setStar]= useState(starInactive);
+  const { content } = props;
+
+  const [stars, setStars] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
-    console.log(content)
-    if ( content == 5) {
-      setStar(starAtive)
+    let starsArray = [];
+    for (let i = 0; i < 5; i++) {
+      if (content > i) {
+        starsArray.push(
+          <img src={starRatingA} key={i} style={{ width: "24px" }} alt="star" />
+        );
+      } else {
+        starsArray.push(
+          <img src={starRatingI} key={i} style={{ width: "24px" }} alt="star" />
+        );
+      }
     }
-   
-    
+    setStars(starsArray);
+
     setLoading(false);
-  }, []);
-  
-    return loading ? (
-      <div>loading...</div>
-    ) :(
-      <div>
-      <img src={star} style={{width:'24px'}} alt="star"/>
-      <img src={star} style={{width:'24px'}} alt="star"/>
-      <img src={star} style={{width:'24px'}} alt="star"/>
-      <img src={star} style={{width:'24px'}} alt="star"/>
-      <img src={star} style={{width:'24px'}} alt="star"/>
-      </div>
-     )
+  }, [content]);
 
-  
-}
+  return loading ? (
+    <div>loading...</div>
+  ) : (
+    <div>{stars?.map((star) => star)}</div>
+  );
+};
 
-export default Rating
+export default Rating;

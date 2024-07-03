@@ -1,6 +1,6 @@
 import React from "react";
 import logements from "../../data/logements.json";
-import "../home/home.css";
+import "../cards/card.css";
 import { Link } from "react-router-dom";
 
 const Cards = (props) => {
@@ -8,7 +8,7 @@ const Cards = (props) => {
     <div className="card">
       <div className="card-container">
         {logements.map((logement) => (
-          <Link to={`/logement/${logement.id}`}>
+          <Link className="card-link" to={`/logement/${logement.id}`}>
             
             <div className="card-title"><h2>{logement.title}</h2></div>
             
