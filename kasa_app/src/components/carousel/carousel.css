@@ -67,12 +67,11 @@
     }
 
     .carousel-container {
-        width: auto;
         height: 255px;
     }
 
     .carousel_img {
-      width: auto;
+      height: 255px;
     }
     .arrow{
         width: 100%;
@@ -82,5 +81,8 @@
     }
     .arrow img[alt="flèche directionnelle droite"] {
         right: 15px;
+    }
+    .infoPics{
+        display: none;
     }
 }
