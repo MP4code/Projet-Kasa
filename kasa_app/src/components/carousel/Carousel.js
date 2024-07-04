@@ -1,5 +1,4 @@
-import React, { useState , useEffect } from "react";
-
+import React, { useState } from "react";
 import "../carousel/carousel.css";
 import ArrowForward from "../../img/arrow_forward_ios-24px 1.png";
 import ArrowBack from "../../img/arrow_back_ios-24px 1.png";

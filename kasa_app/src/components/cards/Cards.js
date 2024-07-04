@@ -8,7 +8,7 @@ const Cards = (props) => {
     <div className="card">
       <div className="card-container">
         {logements.map((logement) => (
-          <Link className="card-link" to={`/logement/${logement.id}`}>
+          <Link className="card-link" to={`/logement/${logement.id}`} key={logement.id}> 
             
             <div className="card-title"><h2>{logement.title}</h2></div>
             

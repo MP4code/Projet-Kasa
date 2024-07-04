@@ -15,6 +15,7 @@ const Navigation = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/logement/:id" element={<Logement />} />
+        <Route exact path="/error-404" element={<Error404/>} />
         <Route exact path="*" element={<Error404/>} />
       </Routes>
       <Footer />

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
+
 import "./header.css";
 
 //
@@ -17,18 +18,17 @@ const Header = () => {
   
   
   useEffect(() => {
-    if (currentPath == "/") {
-      console.log("acuueil");
+    if (currentPath === "/") {
       setBorderAccueil("barreActive");
       setBorderAbout("barreInactive")
     }
-    else if (currentPath == "/about-us"){
+    else if (currentPath === "/about-us"){
       setBorderAbout("barreActive")
     setBorderAccueil("barreInactive")
     }
     
     setLoading(false);
-  }, [location]);
+  }, [location, currentPath]);
 
 
   return loading ? (
