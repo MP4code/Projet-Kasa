@@ -3,7 +3,7 @@ import logements from "../../data/logements.json";
 import "../cards/card.css";
 import { Link } from "react-router-dom";
 
-const Cards = (props) => {
+const Cards = () => {
   return (
     <div className="card">
       <div className="card-container">
