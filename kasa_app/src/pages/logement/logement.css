@@ -94,7 +94,11 @@
   margin-bottom: 5%;
 }
 
-
+/*rating*/
+.ratingStar{
+  display: flex;
+  gap: 10px
+}
 
 @media (max-width: 768px) {
   .card-logement {

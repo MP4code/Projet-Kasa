@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../../pages/logement/logement.css"
 import starRatingA from "../../img/Vector.png";
 import starRatingI from "../../img/VectorInactive.png";
 
@@ -29,7 +30,7 @@ const Rating = (props) => {
   return loading ? (
     <div>loading...</div>
   ) : (
-    <div>{stars?.map((star) => star)}</div>
+    <div className="ratingStar">{stars?.map((star) => star)}</div>
   );
 };
 
